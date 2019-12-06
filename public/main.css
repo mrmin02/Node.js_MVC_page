@@ -1,0 +1,816 @@
+body{
+    max-width: 1500px;
+    width:auto;
+    min-width: 600px;
+    margin: auto;
+}
+
+#logoImg{
+    margin: 0px;
+    padding:0px;
+    display: inline;
+    float:right;
+    /* margin-right: 26%; */
+    margin-right: 73%;
+    margin-top: 20px;
+
+}
+#logoImg_log_rigis{
+    margin-left:10%;
+}
+#form_text_center{
+    /* background:rebeccapurple; */
+}
+#top_register{
+    width:100%;
+    margin: auto;
+    align-content: center;
+}
+#centerDiv{
+    width: 75%;
+    margin: auto;
+    /* max-width: 1300px; */
+    /* background-color: #8EE8B0; */
+}
+/* ------home 화면------- */
+#listStyle{
+    list-style: none;
+    margin: 0;  
+    padding: 0;
+    /* margin-bottom: 300px; */
+}
+#bxTop{
+    width: auto;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 130px;
+}
+#bxsilder{
+    /* display: block; */
+    width:auto;
+    height: auto;
+    position: absolute;
+    background-color: #8EE8B0;
+    /* padding-right: 30px; */
+}   
+#bxImg{
+    width: 100%;
+}
+#top{
+    height: 70px;
+    width: auto;
+    border-bottom: 1px outset aquamarine;
+}
+#mid{
+    height: 70px;
+    width: auto;
+    margin-top: 10px;
+}
+#bot{
+    width:auto;
+    height: auto;
+    margin-top: 50px;
+    border-top:1px solid black;
+}
+
+#bot * {
+    margin: 0;
+    padding: 0;
+}
+
+#bot *:first-child {
+    display: block;
+    margin-bottom: 20px;
+}
+
+#top div{
+    display: inline;
+}
+#top div a{
+    float:right;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 7px;
+    /* border: 1px solid dodgerblue; */
+    /* border-radius: 30px; */
+    /* background-color:dodgerblue; */
+    font-size: 20px;
+    text-decoration: none;
+    color:black;
+    clear:left;
+}
+
+#top div a:hover {
+    font-weight: bold;
+    color: #5CAAEF;
+    border-bottom: 1px solid #5CAAEF;
+    transition: 0.5s;
+}
+
+
+#top div #userName{
+    float:right;
+    font-size:30px;
+    margin-right: 30px;
+    margin-top: 1%;
+}
+#mid a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    float:right;
+    margin-right: 4%;
+}
+
+#mid a:first-child{
+    margin-right: 12%;
+}
+#mainBody{   
+    display: inline-block;
+    width: 100%;
+    align-content: center;
+    align-self: center;
+    
+    
+}
+#mainIn{
+    /* display: inline-block; */
+    width:100%;
+    margin: auto;
+    /* align-content: center;
+    align-items: center; */
+  
+}
+ /*---------qna.pug---------*/
+        
+ #qna{
+    display: inline;
+    /* float: left; */
+                    /* float: right; */
+    /* width:50%; */
+    /* margin-left: 100px; */
+}
+#q_title{
+    /* max-width: 400px; */
+    width: 100%;
+    font-size: 25px;
+    margin:20px 0px; 
+    border-radius: 10px;
+}
+#q_body{
+    /* max-width: 400px; */
+    max-height: 300px;
+    max-width: 600px;;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#qnaSubmit{
+    /* max-width: 400px; */
+    width: 100%;
+    border: 0px;
+    border-radius: 15px;
+    margin-top: 10px;
+    padding:15px;
+    color:white;
+    font-size: 23px;
+    background-color: dodgerblue;
+}
+#q_button{
+    /* max-width: 400px; */
+    width: auto;
+    /* width:500px; */
+}
+#qnaSubmitA{
+    display:block;
+    width: 95%;
+    border: 0px;
+    border-radius: 15px;
+    /* margin-right: 10px;5 */
+    margin-top: 10px;
+    padding:15px;
+    color:white;
+    font-size: 23px;
+    background-color: dodgerblue;
+    text-decoration: none;
+    text-align: center;
+}
+
+#addQna{
+    /* display: inline; */
+    /* background-color:dodgerblue; */
+    width:40%;
+    height: 30%;
+    margin-top: 20px;
+}
+#qnaA{
+    text-decoration: none;
+    margin: 15px 0px;
+    background-color: dodgerblue;
+    color:white;
+    display: block;
+    width:100%;
+    text-align: center;
+    padding: 15px;
+    border-radius: 20px;
+    font-size: 1.5em;
+}
+#addQnaS{
+    width:1000px;;
+    /* display: block; */
+    height: auto;
+    background-color: #8EE8B0;
+}
+#addQna a:nth-child(2n) {
+    background-color: #8EE8B0;
+}
+
+#lateLabel{
+    /* display: block; */
+    font-size: 20px;
+    text-align: center;
+    margin-left: 30px;
+    /* background-color: #8EE8B0; */
+}
+
+/* ---------- qnaInfo  질문 상세 내용들.---------- */
+#title{
+    /* display: block; */
+    background-color: dodgerblue;
+    text-align: center;
+    padding: 20px;
+    font-size: 30px;
+    color:white;
+    border-radius: 30px;
+}
+#titleDiv{
+    display: inline;
+    font-size: 30px;
+    margin-left: 20px;
+}
+#deleteButton{
+    float: right;
+    color:white;
+    background-color: dodgerblue;
+    padding:8px 15px;
+    border: 1px solid dodgerblue;
+    border-radius: 15px;
+    font-size: 15px;
+}
+#deleteButton:hover{
+    background-color: #8EE8B0;
+
+}
+#BB{
+    /* background-color: #8EE8B0; */
+    margin-top: 30px;
+    width:auto;
+    height: auto;
+    /* max-width: 1000px; */
+    min-height: 200px;
+    border: 2px solid dodgerblue;
+    border-radius: 15px;
+    word-wrap: break-word;
+}
+#body{
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 10px 10px 0px 0px;
+}
+#bodyDiv{
+    width:auto;
+    height: auto;
+    display: inline;
+    margin: 1px 10px;
+    font-size: 20px;
+    /* position: absolute; */
+}
+#bodyDiv{
+    display: inline;
+}
+#bodyIfo{
+    display: inline-block;
+    /* background-color: #8EE8B0; */
+    word-wrap: break-word;
+    white-space:pre;
+}
+#timeDiv{
+    display: inline;
+}
+#numberDiv{
+    display: inline;
+}
+#inline{
+    display: inline;
+}
+#margin_div{
+    margin-top:10px;
+    /* position:absolute; */
+    /* background-color: #8EE8B0; */
+}
+#textArea_margin_top{
+    margin-top:20px;
+    margin-left: 6%;
+}
+#textArea_margin_top a{
+    margin-bottom: 30px;
+    margin-left: 20px;
+}
+#textarea{
+    display: inline;
+    resize: none;
+    width:auto;
+    /* height: 100px; */
+}
+#allQna{
+    text-decoration: none;
+    padding: 5px;
+    background-color: dodgerblue;
+    border:1px solid dodgerblue;
+    border-radius: 15px;
+    color: white;
+    align-content: center;
+    
+}
+#allQna:hover{
+    background-color: #8EE8B0;
+}
+#aButton{
+    text-decoration: none;
+    padding: 10px;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+#adminAnswerDiv{
+    height: auto;
+    min-height: 130px;
+    border: 2px solid dodgerblue;
+    border-radius: 15px 15px 15px 15px;
+    /* background-color: #8EE8B0; */
+}
+#adminAnswer{
+    display: block;
+    background-color: dodgerblue;
+    color:white;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px 10px 0px 0px;
+}
+#answerBody{
+    white-space:pre;
+    margin: 2px 10px;
+
+}
+#adminSubmit{
+    margin-top:30px;
+}
+#answerBt{
+    padding: 10px;
+    background-color: dodgerblue;
+    color:white;
+    font-size: 20px;
+    border:2px solid rgb(22, 99, 177);
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+#reAnswerBt{
+    padding: 7px;
+    background-color: dodgerblue;
+    color:white;
+    font-size: 20px;
+    border:2px solid rgb(22, 99, 177);
+    border-radius: 15px;
+    margin-bottom: 25px;
+}
+#margin-bottom{
+    display: inline;
+    width:100px;
+    background-color: #8EE8B0;
+    height: 100px;
+    margin-bottom: 30px;
+}
+#infoAllQna{
+    float: right;
+    text-decoration: none;
+    padding:5px;
+    color:white;
+    background-color: dodgerblue;
+    border-radius: 15px;
+    border: 1px solid dodgerblue;
+    margin-bottom: 3px;
+}
+#infoAllQna:hover{
+    background-color: #8EE8B0;
+}
+/* -----------모든 질문 qnaAll----------------- */
+#qnaAllTilte{
+    display: block;
+    /* background-color: #8EE8B0; */
+    width: 17%;
+    margin: 0px auto;
+
+}
+#qnaAll_Div{
+    width:100%;
+    margin:auto;
+}
+#qnaAll_css{
+    display: inline;
+    font-size: 20px;
+    /* margin-left: 500px; */
+    /* align-self: center; */
+    width: 100%;
+    margin:auto;
+    padding: 3px;
+    background-color:dodgerblue;
+    border-radius: 15px;
+    color:white;
+    vertical-align: middle;
+}
+
+#qnaAll_title{
+    display: block;
+    /* background-color: aqua; */
+    max-width: 500px;
+    width:100%;
+    text-align: center;
+    min-width: 300px;
+    font-size: 30px;
+    margin: 15px 0px;
+    text-decoration: none;
+    border-radius: 15px;
+    color:white;
+    /* margin-left: 23%; */
+}
+#qnaAll_Div a:nth-child(2n) {
+    background-color: #8EE8B0;
+}
+#qnaAll_Div a:nth-child(2n+1) {
+    background-color: dodgerblue;
+}
+#goToMenuQna{
+    display: inline;
+    /* margin-left:20%; */
+    text-decoration: none;
+    padding: 10px;
+    background-color: dodgerblue;
+    color: white;
+    border: 1px solid dodgerblue;
+    border-radius: 15px;
+    
+}
+#flax{
+    /* background-color:#8EE8B0; */
+    display: flex;
+    width:auto;
+    height: auto;
+    /* flex-basis: 30%; */
+    
+}
+#pre{
+    width: 25%;
+    display: inline;
+    margin:auto;
+    align-self: auto;
+    /* float: right; */
+    /* background-color: blueviolet; */
+}
+#qnaAll_Div{
+    width:50%;
+    align-content: center;
+    margin:auto;
+    /* float: right; */
+    /* background-color: greenyellow; */
+}
+#qnaAll_Div a{
+    /* display: block; */
+}
+#nextQna{
+    /* margin-left: 10%; */
+    width: 25%;
+    margin:auto;
+    display: inline;
+    /* float: right; */
+    /* margin-bottom: 50px; */
+    /* background-color: blueviolet; */
+}
+#nextQna button{
+    margin-left: 38%;
+    /* margin-top: 100%; */
+    padding:30px;
+    background-color: dodgerblue;
+    border: 3px solid rgb(23, 107, 192);
+    border-radius: 40px;
+    color:white;
+    font-size: 20px;
+    
+}
+#nextQna button:hover{
+    background-color: #8EE8B0;
+}
+#pre button:hover{
+    background-color: #8EE8B0;
+}
+#pre button{
+    margin-left: 17%;
+    /* margin-top: 100%; */
+    padding:30px;
+    background-color: dodgerblue;
+    border: 3px solid rgb(23, 107, 192);
+    border-radius: 40px;
+    color:white;
+    font-size: 20px;
+}
+/* -------------qnaRR------------ */
+#qnaRR_Div{
+    /* background-color: aqua; */
+    width: auto;
+    height: auto;
+    margin-top: 100px;
+    margin-right: 100px;
+    padding-bottom: 150px;
+}
+#RR_div2{
+    border: 1px solid dodgerblue;
+    border-radius: 15px;
+    /* position: absolute; */
+    width: auto;
+    min-width: 44%;
+    margin-left: 5%;
+    /* height: 500px; */
+}
+#RR_body{
+    display: block;
+    text-align: center;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px 10px 0px 0px;
+}
+#RRTextArea{
+    min-height: 200px;
+    height: auto;
+    width: 99%;
+    border: 1px solid dodgerblue;
+    position: relative;
+    border:none;
+    font-size: 20px;
+    /* position: absolute; */
+    resize: none;
+}
+#RRchild{
+    position: relative;
+    width: 100%;
+    border: 1px solid dodgerblue;
+    border-radius: 0px 0px 10px 10px;
+    background-color: dodgerblue;
+    border:1px solid dodgerblue;
+    color: white;
+    font-size: 1.3em;
+}
+#RRchild:hover{
+    background-color: #8EE8B0; 
+}
+
+/* #RRTextArea{
+    width: 
+} */
+/* resize: none; */
+
+/* --------profile--------- */
+.wrapper{
+    display: grid;
+    grid-template-columns: 25% 67%;
+    grid-gap: 8%;
+}
+#profile_name_size{
+    font-size: 20px;
+}
+#profile_div{
+    height: 600px;
+    /* background-color: #8EE8B0; */
+    font-size: 23px;
+}
+#profile_div a{
+    background-color: dodgerblue;
+    display: block;
+    text-align: center;
+    border: 2px solid dodgerblue;
+    border-radius: 15px;
+    color: white;
+    margin: 10px 10px;
+    text-decoration: none;
+}
+#profile_div a:hover{
+    background-color: #8EE8B0;
+}
+#profile_div2{
+    height: auto;
+    /* background-color: aqua;  */
+}
+h5{
+    display: block;
+    text-align: center;
+}
+/* ------프로필------- */
+#profile100_div{
+    font-size: 20px;
+    min-width: 930px;
+    width:auto;
+    max-width:1200px;
+    /* text-align: center; */
+}
+#profile200_div{
+    font-size: 20px;
+}
+.float_right100{
+    float: right;
+}
+.color100{
+    color: red;
+}
+#profile100_a{
+/* 수정 a 태그 */
+    float: right;
+    text-decoration: none;
+    margin: 0px 10px;   
+    background-color: dodgerblue;
+    color: white;
+    border: 1px solid dodgerblue;
+    font-size: 20px;
+    padding:3px;
+    border-radius: 8px;
+}
+#profile100_b{
+/* 삭제 버튼 */
+    float: right;
+    background-color: dodgerblue;
+    color: white;
+    border: 1px solid dodgerblue;
+    font-size: 20px;
+    padding:3px;
+    border-radius: 8px;
+}
+
+.font-size10{
+    float: right;
+    display: inline;
+    font-size: 15px;
+    margin-right: 40px;
+}
+#answer200{
+    margin-left: 25px;
+    /* color: dodgerblue; */
+}
+#answer200_2{
+    margin-left: 25px;
+    color:red;
+}
+#a200{
+    text-decoration: none;
+    color:black;
+}
+#label400{
+    display: inline-block;
+    width: 320px;
+    font-size: 1.3em;
+}
+#password400_0{
+    width: 300px;
+    font-size: 35px;
+    border-radius: 15px;
+    border: 1px solid dodgerblue;
+}
+#password400_1{
+    width: 300px;
+    font-size: 35px;
+    border-radius: 15px;
+    border: 1px solid dodgerblue;
+}
+#password400_2{
+    width: 300px;
+    font-size: 35px;
+    border-radius: 15px;
+    border: 1px solid dodgerblue;
+}
+#profile400_button{
+    width:300px;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 25px;
+    border: none;
+    border: 2px solid dodgerblue;
+    border-radius: 15px;
+    margin-left: 42%;
+}
+#profile400_button:hover{
+    background-color: #8EE8B0;
+    border: 2px solid dodgerblue;
+}
+/* profile300 */
+#profile300_label{
+    font-size: 25px;
+}
+#profile300_input{
+    margin-left: 30px;
+    font-size: 25px;
+    width:200px;
+}
+#profile300_btn{
+    width:200px;
+    font-size: 25px;
+    background-color: dodgerblue;
+    border: 2px solid dodgerblue;
+    border-radius: 15px;
+    color: white;
+    margin-left: 24%;
+}
+
+#button100{
+    margin-left: 20px;
+    color: white;
+    background-color: dodgerblue;
+    border:2px solid dodgerblue;
+    border-radius: 15px;
+    font-size: 20px;
+
+}
+#button100:hover{
+    background-color: #8EE8B0;
+}    
+    
+@media ( min-width: 1100px ){
+    #qna{
+        float: right;
+    }
+}
+
+
+#grid .label{
+    display: block;
+}
+#grid label{
+    width:auto;
+    display: block;
+    background: #BDBDBD;
+    padding: 40px 0px;
+    /* border: 1px solid black; */
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+}
+#grid label:hover{
+    background-color: dodgerblue;
+}
+#grid{
+    display: grid;
+    grid-template-columns: 11.5% 11.5% 11.5% 11.5% 11.5% 11.5% 11.5% 11.5%;
+    /* margin: 0px 20px; */
+    width: 100%;
+    margin: auto;
+    grid-gap: 1%;
+}
+
+#hyonzi_MB{
+    width:100%;
+    display: block;
+    border-bottom: 3px solid dodgerblue; 
+
+}
+
+#mid a:hover {
+    color: #5CAAEF;
+    border-bottom: solid 1px #5CAAEF;
+    font-weight: bold;
+}
+
+#mid a::before {
+    content: '';
+    border-bottom: solid 1px #5CAAEF;
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    opacity: 0;
+}
+
+#mid a:hover::before {
+    opacity: 1.0;
+}
+
+#mid a, #mid a::before {
+    transition: all 0.2s ease;
+}
+
+.homeForm {
+    float: left;
+    margin-left: 12%;
+}

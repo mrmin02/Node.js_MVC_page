@@ -1,0 +1,11 @@
+extends main
+
+block content
+    #centerDiv
+        div#qnaRR_Div
+            div#RR_div2
+                label#RR_body 질문내용
+                form#qnaRR_submit(action="/qnas/qnaRR/reQna/"+id  method="POST")
+                    textarea#RRTextArea(name="textArea", cols="30", rows="10" required)=body
+                    button#RRchild(type="submit") 수정 완료
+    script(src="/qnaRR.js")

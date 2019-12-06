@@ -1,0 +1,24 @@
+extends main
+
+block content
+    link(rel="stylesheet", href="/introduce.css")
+    #centerDiv
+        #headDiv
+            label#headLabel 조원소개
+        #profile    
+            form#firstForm.profileForm
+                a(href="/introduce/memberone")
+                    img.members(src="/images/memberone.jpg" width="200" name="memberone" align="top")
+            form#secondForm.profileForm 
+                a(href="/introduce/membertwo") 
+                    img.members(src="/images/membertwo.jpg" width="200" name="membertwo")
+            form#thirdForm.profileForm
+                a(href="/introduce/memberthree")
+                    img.members(src="/images/memberthree.jpg" width="200" name="memberthree")
+            form#fourthForm.profileForm
+                a(href="/introduce/memberfour")
+                    img.members(src="/images/memberfour.jpg" width="200" name="memberfour")
+            form#fifthForm.profileForm
+                a(href="/introduce/memberfive")
+                    img.members(src="/images/memberfive.jpg" width="200" name="memberfive")
+    script(src="/introduce.js")

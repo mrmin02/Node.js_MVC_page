@@ -1,0 +1,67 @@
+extends profile
+
+block content2
+    .centerDiv
+        div 회원관리 페이지임.
+        br
+        //- hr
+        if result.length !=0
+            -var i = 0
+            for uu in result
+                div#profile100_div
+                    label 회원 ID :  
+                    ="\u00A0\u00A0"
+                    label#profile100_u_id(name="profile100_u_id" value=""+i)=uu.u_id
+                    .float_right100
+                        ="\u00A0\u00A0\u00A0\u00A0\u00A0"
+                        label 회원 이름 : 
+                        label=uu.name
+                        ="\u00A0\u00A0\u00A0\u00A0\u00A0"
+                        label 회원 성별: 
+                        if uu.gender ==10
+                            label 남자
+                        else 
+                            label 여자
+                        ="\u00A0\u00A0\u00A0\u00A0\u00A0"
+                        label 관리자 여부 : 
+                        if uu.admin ==1
+                            label.color100 관리자
+                            if uu.u_id != user.u_id       
+                                form#inline(action="/profile/"+uu.u_id+"/100/remAdmin" method="POST")                     
+                                        button#button100 권한 해제
+                            else 
+                                button#button100 현 관리자
+                        else 
+                            label 사용자
+                            form#inline(action="/profile/"+uu.u_id+"/100/addAdmin" method="POST")
+                                button#button100 권한 부여
+                    hr
+                -i++
+    script.
+        var userId = document.getElementsByName("profile100_u_id");
+        var count =0;
+        var R_u_id = new Array();
+        for(var i=0; i<userId.length;i++){ // 
+            R_u_id[i]= userId[i].textContent;
+
+            if(userId[i].textContent.length>3){
+                userId[i].textContent = userId[i].textContent.substring(0,3)+"..";
+            }
+
+            userId[i].addEventListener('click',(e)=>{
+                console.log(e.target.getAttribute('value'));
+                console.log("count",count);
+                if(count==0){
+                    e.target.innerHTML = R_u_id[e.target.getAttribute('value')];
+                    count++;
+                }else{
+                    if(e.target.innerHTML.length >3){
+                        console.log('dd');
+                        e.target.innerHTML = e.target.innerHTML.substring(0,3)+"..";
+                    }
+                    count=0;
+                }
+                
+            });
+        }
+

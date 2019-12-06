@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+html(lang="ko")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel='stylesheet' href='/register.css')
+        title Document
+    body
+        thead
+            div#top
+                form(style="margin:0% 35%")
+                    a(href='/') 
+                        img#logoImg_log_rigis(src="/images/logo.png", alt="" width="200px")                        
+                hr
+        mbody        
+            form#register(action='/auth/register' method='post')
+                center
+                    div#mid
+                        div
+                            input#userId(type="text" name="u_id" placeholder="아이디" required autofocus maxlength="14") 
+                        div
+                            input#userPwd(type="password" name="password" placeholder="비밀번호" required maxlength="14")    
+                        div
+                            input#userEmail(type="email" name="email" placeholder="이메일" required maxlength="29") 
+                        div
+                            input#userName(type="text" name="name" placeholder="이름" required maxlength="15" ) 
+                        div
+                            input#userIdentity(type="number" name="identity_number" placeholder="주민등록번호 앞자리" required  maxlength="6")                         
+                        div
+                            input#userPhone(type="text" name="phone" placeholder="핸드폰 번호" required maxlength="15") 
+                        div#gender
+                            label 성별&nbsp&nbsp남
+                            input(type="radio" name="gender" value=10 required)
+                            label 여
+                            input(type="radio" name="gender" value=20 required)
+                        if message
+                            div#message=message        
+                        div
+                            button#addUser(type="submit") 회원가입
+                        
+        bfoot
+
+        script(src="/register.js")

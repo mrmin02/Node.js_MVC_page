@@ -1,0 +1,82 @@
+#centerDiv {
+    height: 100%;
+    border: 1px solid black;
+    padding: 3%;
+    box-shadow: 0 5px 5px 0 gray;
+    background-image: url('/images/paper_texture.jpg');
+    /* opacity: 0.8; */
+}
+
+#profile {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    font-family: NanumBarunpenB;
+}
+
+.profileForm {
+    display:inline-block;
+    height: 100%;
+    margin-bottom: auto;
+}
+
+.profileForm:hover {
+    scale: 1.05;
+}
+
+.profileForm a {
+    display: inline-block;
+}
+
+.members {
+    border-radius: 10px;
+}
+
+#headDiv {
+    margin-top: 2%;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #5CAAEF;
+    border-top: 2px solid #5CAAEF;
+}
+
+#headLabel {
+    display:block;
+    font-size: 300%;
+    font-weight: 700;
+    color: black;
+    letter-spacing: 30px;
+}
+
+.font {
+    font-size: 150%;
+    font-weight: 700;
+    color: #2a243f;
+    display:block;
+    width: 100%;
+    margin-left: 30px;
+}
+
+.font:nth-child(2n) {
+    margin-bottom: 50px;
+}
+
+.font:nth-child(2n-1) {
+    color: black;
+    font-size: 200%;
+}
+
+.members:hover {
+    scale: 1.05;
+}
+
+@font-face {
+    font-family: 'NanumBarunpenB';
+    src: url('/stylesheets/NanumBarunpenB.ttf') format('truetype');
+
+    font-family: 'NanumBarunpenR';
+    src: url('/stylesheets/NanumBarunpenR.ttf') format('truetype');
+
+    font-family: 'NanumSquareRoundB';
+    src: url('/stylesheets/NanumSquareRoundB.ttf') format('truetype');
+}

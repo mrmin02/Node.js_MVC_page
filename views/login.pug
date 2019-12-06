@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+html(lang="ko")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel='stylesheet' href='/login.css')
+        title Document
+    body
+        thead
+            div#top
+                form#form_text_center(style="margin:0% 35%")
+                    a(href='/') 
+                        img#logoImg_log_rigis(src="/images/logo.png", alt="" width="200px")                        
+                    
+            hr
+        mbody
+            form#login(action="/auth/login" method="post")
+                center
+                    div#mid
+                        div
+                            //- input#userId(type="text" name='u_id' placeholder="아이디" required autofocus maxlength="14")
+                            input#userId(type="text" name='username' placeholder="아이디" required autofocus maxlength="14")
+                        div
+                            input#userPwd(type="password" name='password' placeholder="비밀번호" required maxlength="14")
+                        if message
+                            br
+                            div#message=message    
+                        div
+                            button(type="submit") 로그인
+        bfoot
+
+
+        //- script(src="/login.js")
+
+
+        //- form#login
+        //-     div
+        //-         input#userId(type="text" placeholder="아이디") 
+        //-     div
+        //-         input#userPwd(type="password" placeholder="비밀번호")    
+        //-     div
+        //-         button(type="submit") 로그인
+        //- script(src="/login.js")
+        

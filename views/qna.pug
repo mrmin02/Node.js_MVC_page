@@ -1,0 +1,24 @@
+extends main
+
+block content
+    div#centerDiv
+        form#qna
+            div#q_title
+                input#q_title(type="text" maxlength="19" placeholder="제목")
+            div#q_body
+                textarea#q_body(name="내용", cols="45", rows="20" placeholder="내용을 입력하세요").
+                
+            div#q_button
+                if user
+                    button#qnaSubmit(type="submit") 작성 완료
+                else
+                    a#qnaSubmitA(href='/login') 로그인이 필요합니다
+
+        div
+            label#lateLabel 최근 질문
+        div#addQna
+            div 없음
+        div#addQnaS
+        div
+            a(href="/qnas/allQna")#allQna 전체 질문 보러가기
+    script(src="/qna.js")

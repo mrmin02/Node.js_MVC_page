@@ -1,0 +1,15 @@
+extends profile
+
+block content2
+    div
+        label#profile300_label 현재 이름 : 
+        label#profile300_label=user.name
+    br
+    div
+        label#profile300_label 변경할 이름 :
+        form#inline(action="/profile/"+user.u_id+"/300" method="post")
+            input#profile300_input(type="text" name="name" required maxlength="14" autofocus)
+            br
+            br
+            button#profile300_btn(type="submit") 변경하기
+        label=message

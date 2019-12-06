@@ -1,0 +1,25 @@
+extends main
+
+block content
+    //- img(src="images/yonzin.jpeg", alt="")
+    script.
+        $(document).ready(function(){
+            $('.slider').bxSlider({
+                auto: true, 
+                speed: 600, 
+                pause: 3000, 
+                mode:'fade',//horizontal
+                autoControls:false, 
+                pager:false,
+                controls:false,
+            });
+        });
+    div#bxTop
+        ul#listStyle.slider
+            for home in img
+                li
+                    img#bxImg(src= home.i_src,alt="사진을 찾을 수 없습니다..")
+            //- li
+            //-     img#bxImg(src="images/yonzin.jpeg", alt="")
+            //- li
+            //-     img#bxImg(src="images/yonzin2.jpg", alt="")

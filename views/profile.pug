@@ -1,0 +1,25 @@
+extends main
+
+block content
+    #centerDiv
+        div 내 정보
+        hr
+        div#profile_name_size
+            label 이름 : 
+            label=user.name
+        br
+        div 자기소개
+            div 안녕하세요.
+        .wrapper
+            div#profile_div
+                a(href="/profile/"+user.u_id+"/200") 작성한 글 보기
+                br
+                h5 수정
+                a(href="/profile/"+user.u_id+"/300") 이름 변경하기
+                a(href="/profile/"+user.u_id+"/400") 비밀번호 변경하기
+                if user.admin == 1
+                    br
+                    h5 관리
+                    a(href="/profile/"+user.u_id+"/100") 회원 관리
+            div#profile_div2
+                block content2

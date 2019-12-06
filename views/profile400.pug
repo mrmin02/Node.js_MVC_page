@@ -1,0 +1,56 @@
+extends profile
+
+block content2
+    form#profile400Submit(action="/profile/"+user.u_id+"/400" method="POST")
+        div#label400
+            label#label400 현재 비밀번호
+        div#inline
+            input#password400_0(type="password" required autofocus maxlength="14" name="userPwd")
+        br
+        br
+        div#label400
+            label#label400 변경할 비밀번호
+        div#inline
+            input#password400_1(type="password" required maxlength="14" name="newPwd")
+        br
+        br
+        div#label400
+            label#label400 변경할 비밀번호 확인
+        div#inline
+            input#password400_2(type="password" required maxlength="14" )
+        br
+        br
+        button#profile400_button(type="submit") 변경하기
+    div=message
+
+    script.
+        document.getElementById("profile400Submit").addEventListener('submit',(e)=>{
+            //- e.preventDefault();
+            console.log("변경 클릭");
+            var pwd0 = e.target.password400_0.value;
+            pwd0=pwd0.trim();
+            console.log("pwd0",pwd0);
+            var pwd1 = e.target.password400_1.value;
+            pwd1=pwd1.trim();
+            console.log("pwd1",pwd1);
+            var pwd2 = e.target.password400_2.value;
+            pwd2=pwd2.trim();
+            console.log("pwd2",pwd2);
+
+            if(!pwd0){
+                e.preventDefault();
+                return alert("비밀번호를 입력하세요.");
+            }else if(!pwd1){
+                e.preventDefault();
+                return alert("변경할 비밀번호를 입력하세요.");
+            }else if(!pwd2){
+                e.preventDefault();
+                return alert("변경할 비밀번호 확인을 입력하세요.");
+            }
+            if(pwd1!=pwd2){
+                e.preventDefault();
+                return alert("변경할 비밀번호가 올바르지 않습니다.");
+            }
+        });
+        
+

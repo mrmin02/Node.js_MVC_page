@@ -1,0 +1,67 @@
+extends main
+
+block content
+    #centerDiv
+        div#margin_div
+            div
+                label#title 제목
+                div#titleDiv=q_title
+                if user
+                    if user.u_id == u_id
+                        form#deleteQna(action="/qnas/delete/"+id  method="POST")
+                            button#deleteButton 질문 삭제하기
+                        form#qnaRR(action="/qnas/qnaRR/item/"+id  method="GET")
+                            button#deleteButton 수정하기
+                            br
+                    else if admin == 1 
+                        form#deleteQna(action="/qnas/delete/"+id  method="POST")
+                            button#deleteButton 관리자 권한으로 삭제
+                            br
+            div#BB
+                label#body 질문내용
+                br
+                div#bodyDiv
+                    label#bodyIfo=body
+            br    
+            div#inline
+                lable &nbsp&nbsp등록자 이름:  
+                //- 이름은 조인해서 가져올 것div
+                label#AnswerUserId=name
+            div#inline
+                label#time &nbsp&nbsp질문등록 시간 : 
+                div#timeDiv=time  
+            div#inline
+                label#number   &nbsp &nbsp 질문번호: 
+                div#numberDiv=id
+            #inline
+                a#infoAllQna(href="/qnas/allQna") 전체 목록      
+            hr#insertTarget
+            if answer==1
+                div#checkAnswer
+                    div#adminAnswerDiv
+                        label#adminAnswer 답변
+                        br
+                        div#bodyDiv
+                            label#answerBody=answerBody
+            else
+                br
+                div 답변 대기중...
+            if admin==1
+                div#textArea_margin_top
+                    if answer==0
+                        form#answer
+                            textarea#textarea(name="adminAnswer", cols="100", rows="7" required)
+                            button#answerBt(type="submit" name="answer") 답변
+                            button#reAnswer(type="submit" name="reAnswer" style="visibility:hidden") 수정
+                        
+                    else
+                        form#reAnswer
+                            textarea#textarea(name="adminAnswer", cols="100", rows="7" required)
+                            button#reAnswerBt(type="submit" name="reAnswer") 수정
+                            button#answer(type="submit" name="answer" style="visibility:hidden") 답변
+            else
+                button#answer(type="submit" name="answer" style="visibility:hidden") 답변
+                button#reAnswer(type="submit" name="reAnswer" style="visibility:hidden") 수정
+    script(src="/qnaInfo.js")
+    
+    

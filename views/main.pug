@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+html(lang="ko")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet" href='https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css')
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+        script(src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js")
+        link(rel='stylesheet' href='/main.css')
+
+        title Document
+
+    body
+        thead
+            div#top
+                div#logo
+                
+                if user
+                    div
+                        a(href="/auth/logout") 로그아웃
+                        a(href="/profile/"+user.u_id+"/200") 내 정보
+                        div#userName=user.name+' 님'                             
+                else
+                    div           
+                        a#login(href="/register") 회원가입
+                        a(href="/login") 로그인
+                form.homeForm#inline
+                    a(href='/') 
+                        img#logoImg(src="/images/logo.png", alt="" width="200px")                        
+                
+        tbody
+            div#mid
+                a.topMenu(href="/menu/qna") 질의응답
+                a.topMenu(href="/menu/introduce") 조원소개
+                a.topMenu(href="/menu/hyonzi") 현지학기제
+                a.topMenu(href="/") 메인
+            div#mainBody
+                div#mainIn 
+                    block content
+        tfoot
+            div#bot
+                h3 영진전문대학교 컴퓨터정보계열
+                h4 조장
+                    label 김현진
+                h4 조원
+                    label 김기운, 김도준, 김승준, 최민석
+        

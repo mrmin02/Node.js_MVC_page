@@ -1,0 +1,38 @@
+extends profile
+
+block content2
+    if result.length !=0
+        for qna in result
+            div#profile200_div
+                label 제목 :  
+                ="\u00A0\u00A0\u00A0\u00A0\u00A0"
+                a#a200(href="/qnas/item/"+qna.id name="title")=qna.q_title
+                form#inline(action="/qnas/delete/"+qna.id  method="post")
+                    button(type="submit" name="delete200" value="delete200")#profile100_b 삭제
+                a(href="/qnas/qnaRR/item/"+qna.id)#profile100_a 수정    
+                .font-size10
+                    label 시간:
+                    label=qna.time
+                    ="\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0"
+                    label 질문 번호 : 
+                    label(name="id")=qna.id
+                    
+                    if qna.answer ==0
+                        label#answer200 답변 대기중
+                    else 
+                        label#answer200_2 답변 완료
+                hr
+    else
+        div 작성한 질문 없음.
+        hr
+        br
+        a(href="/menu/qna") 작성하러 가기
+    script.
+        var title =document.getElementsByName("title");
+        //- console.log(title[1].textContent);
+        for(var i= 0; i<title.length;i++){
+            if(title[i].textContent.length >4){
+                title[i].textContent = title[i].textContent.substring(0,4)+"...";
+            }
+            console.log("addEvent");
+        }   
